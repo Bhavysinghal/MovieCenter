@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+/* =============================
+   Global Theme Colors
+   ============================= */
+/* primary: #1F1E24
+   secondary: #6556CD */
+
+/* =============================
+   Scrollbar Styles
+   ============================= */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #181819;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #827bb2;
+}
+
+/* =============================
+   Custom Select Dropdown
+   ============================= */
+select {
+    appearance: none;
+    outline: none;
+    border: 0;
+    background: #27272a;
+    color: #fff;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    padding: 0 0.5em;
+    cursor: pointer;
+    min-width: 0;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    max-width: 100%;
+    height: 3em;
+    background: #27272a;
+    border-radius: 0.25em;
+    overflow: hidden;
+    line-height: 3;
+}
+
+.select::after {
+    content: "▼";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #27272a;
+    pointer-events: none;
+    transition: background 0.25s ease;
+}
+
+.select:hover::after {
+    background: #6556cd;
+}
+
+/* Responsive Select */
+@media (max-width: 640px) {
+    .select {
+        width: 100%;
+        height: 2.5em;
+        font-size: 0.95em;
+    }
+
+    select {
+        font-size: 0.95em;
+        padding: 0 0.3em;
+    }
+
+    .select::after {
+        padding: 0 0.7em;
+        font-size: 0.9em;
+    }
+}
+
+/* =============================
+   Trailer Player Responsiveness
+   ============================= */
+@media (max-width: 768px) {
+    .trailer-container {
+        padding: 1rem;
+    }
+
+    .react-player {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .trailer-container {
+        padding: 0.5rem;
+    }
+}
+
+/* =============================
+   Aspect Ratio Adjustments
+   ============================= */
+@media (orientation: landscape) and (max-height: 600px) {
+    .trailer-video-container {
+        max-height: 85vh;
+        max-width: 95vw;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    .trailer-video-container {
+        max-height: 50vh;
+        max-width: 95vw;
+    }
+}
+
+/* =============================
+   General Layout Responsiveness
+   ============================= */
+@media (max-width: 1024px) {
+    .main-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .side-nav,
+    .top-nav {
+        width: 100%;
+        position: relative;
+    }
+}
+
+/* =============================
+   Text Scaling
+   ============================= */
+@media (max-width: 768px) {
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1rem !important;
+    }
+
+    p,
+    span {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* =============================
+   Card Responsiveness
+   ============================= */
+@media (max-width: 640px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100% !important;
+    }
+}
+
+/* =============================
+   Shared Page Padding
+   ============================= */
+.movie-page,
+.popular-page,
+.trending-page {
+    padding-bottom: 3rem;
+}
