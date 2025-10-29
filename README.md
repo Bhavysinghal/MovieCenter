@@ -7,7 +7,7 @@ It integrates with the **TMDB API** to provide real-time movie data, trailers, a
 
 ## 🚀 Live Demo
 🔗 **GitHub Repo:** [MovieCenter](https://github.com/Bhavysinghal/MovieCenter)
-🔗 *(Add your Vercel or Netlify link here once deployed)*
+🔗 *https://movie-center-kappa.vercel.app/*
 
 ---
 
@@ -33,7 +33,7 @@ It integrates with the **TMDB API** to provide real-time movie data, trailers, a
 | API | TMDB (The Movie Database) |
 | HTTP Client | Axios |
 | Icons | Remix Icon |
-| Deployment | Vercel / Netlify |
+| Deployment | Vercel |
 
 ---
 
@@ -43,14 +43,15 @@ It integrates with the **TMDB API** to provide real-time movie data, trailers, a
 MovieCenter/
 ├── src/
 │   ├── components/
-│   │   ├── Topnav.jsx
-│   │   ├── Header.jsx
-│   │   ├── Loading.jsx
+│   │   ├── Movie.jsx
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
 │   │   ├── NotFound.jsx
-│   │   ├── pages/
+│   │   └── ...
 │   │   └── partials/
 │   ├── utils/
 │   │   └── axios.js
+│   │   └── ...
 │   ├── App.jsx
 │   ├── index.js
 │   └── main.css
