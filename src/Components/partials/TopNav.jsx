@@ -3,7 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import axios from "../../utils/axios";
 import noimage from "/noimage.jpg";
 
-const Topnav = () => {
+/**
+ * Props:
+ * - isMenuOpen (boolean): passed from parent (Navbar/Hamburger component)
+ */
+const Topnav = ({ isMenuOpen = false }) => {
   const [query, setquery] = useState("");
   const [searches, setsearches] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
@@ -27,10 +31,14 @@ const Topnav = () => {
     }
   }, [query]);
 
+  // 🧠 Hide search bar when hamburger menu is open (on mobile)
+  const isHidden = isMenuOpen && window.innerWidth < 768; // md breakpoint
+
   return (
     <nav
-      className="w-full flex items-center justify-center px-4 sm:px-6 md:px-10 py-2 sm:py-3 
-      bg-[#1F1E24]/95 backdrop-blur-md sticky top-0 z-40 shadow-sm transition-all duration-300"
+      className={`w-full flex items-center justify-center px-4 sm:px-6 md:px-10 py-2 sm:py-3 
+      bg-[#1F1E24]/95 backdrop-blur-md sticky top-0 z-40 shadow-sm transition-all duration-300 
+      ${isHidden ? "hidden md:flex" : ""}`}
     >
       <div className="w-full max-w-2xl relative">
         {/* 🔍 Search Icon */}
