@@ -1,12 +1,99 @@
-# React + Vite
+# 🎬 MovieCenter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **MovieCenter** — a modern, fully responsive movie discovery web app built using **React.js** and **Tailwind CSS**.  
+It integrates with the **TMDB API** to provide real-time movie data, trailers, and detailed information.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+🔗 **GitHub Repo:** [MovieCenter](https://github.com/Bhavysinghal/MovieCenter)
+🔗 *(Add your Vercel or Netlify link here once deployed)*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Features
+- 📱 Fully Responsive UI (Mobile → Desktop)
+- 🔍 Search Movies, TV Shows, and People
+- 🎞️ Dynamic Filters & Categories
+- ⭐ Trending & Popular Lists
+- 🎬 Watch Trailers In-App
+- ⚡ Fast Loading & Smooth Transitions
+- 🧭 Sticky Top Navigation Bar
+- 🛠️ Error + Loading Screens for a better UX
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|-----------|-------------|
+| Frontend | React.js |
+| Styling | Tailwind CSS |
+| Routing | React Router DOM |
+| API | TMDB (The Movie Database) |
+| HTTP Client | Axios |
+| Icons | Remix Icon |
+| Deployment | Vercel / Netlify |
+
+---
+
+## 📂 Folder Structure
+
+```
+MovieCenter/
+├── src/
+│   ├── components/
+│   │   ├── Topnav.jsx
+│   │   ├── Header.jsx
+│   │   ├── Loading.jsx
+│   │   ├── NotFound.jsx
+│   │   ├── pages/
+│   │   └── partials/
+│   ├── utils/
+│   │   └── axios.js
+│   ├── App.jsx
+│   ├── index.js
+│   └── main.css
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone this repository
+git clone https://github.com/Bhavysinghal/MovieCenter.git
+
+# Navigate into the project folder
+cd MovieCenter
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+---
+
+## 🧠 API Reference
+- Base URL: [https://api.themoviedb.org/3](https://api.themoviedb.org/3)
+- API Key required → Create one at [TMDB API](https://www.themoviedb.org/documentation/api)
+
+---
+
+## 🧑‍💻 Developer
+**👤 Bhavy Singhal**  
+🔗 GitHub: [Bhavysinghal](https://github.com/Bhavysinghal)
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.  
+Feel free to use and modify it as per your needs.
