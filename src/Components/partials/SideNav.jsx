@@ -15,7 +15,7 @@ const SideNav = () => {
       {/* Hamburger Button (Mobile Only) */}
       <button
         onClick={() => setOpen(!open)}
-        className="md:hidden fixed top-4 left-4 z-50 text-white text-3xl focus:outline-none"
+        className="md:hidden fixed top-4 left-4 z-[100] text-white text-3xl focus:outline-none"
       >
         <i className={`${open ? "ri-close-fill" : "ri-menu-line"}`}></i>
       </button>
@@ -26,7 +26,7 @@ const SideNav = () => {
         bg-[#1F1E24] md:bg-transparent border-r-2 border-zinc-400 md:translate-x-0 
         transform ${open ? "translate-x-0" : "-translate-x-full"} 
         transition-transform duration-300 ease-in-out 
-        p-8 md:p-10 z-40 flex flex-col overflow-y-auto`}
+        p-8 md:p-10 z-[90] flex flex-col overflow-y-auto`}
       >
         {/* Logo */}
         <h1 className="text-2xl text-white font-bold mb-6 flex items-center">
@@ -105,7 +105,7 @@ const SideNav = () => {
       {open && (
         <div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm md:hidden z-30"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm md:hidden z-[80]"
         ></div>
       )}
     </>
